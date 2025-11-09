@@ -124,10 +124,12 @@ jreleaser {
             documentation.set("https://github.com/WeaponMechanics/MechanicsCore#readme")
         }
 
-        java {
-            groupId = "com.cjcrafter"
-            artifactId = "mechanicscore"
-            version = findProperty("version").toString()
+        languages {
+            java {
+                groupId = "com.cjcrafter"
+                artifactId = "mechanicscore"
+                version = findProperty("version").toString()
+            }
         }
 
         snapshot {

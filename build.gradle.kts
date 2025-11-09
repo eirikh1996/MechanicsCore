@@ -1,4 +1,5 @@
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     id("io.papermc.paperweight.userdev") version "2.0.0-beta.17" apply false
@@ -16,8 +17,8 @@ allprojects {
 
         pluginManager.withPlugin("org.jetbrains.kotlin.jvm") {
             tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
-                kotlinOptions {
-                    jvmTarget = "21"
+                compilerOptions {
+                    jvmTarget = JvmTarget.JVM_21
                 }
             }
         }
